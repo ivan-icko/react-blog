@@ -1,14 +1,13 @@
 import BlogList from "./BlogList";
+import { urlJobs } from "./endpoints";
 import useFetch from "./useFetch";
 
 
 
 const Home = () => {
 
-    const {data:blogs, isPending,error} = useFetch('http://localhost:8000/blogs');
+    const {data:blogs, isPending,error} = useFetch(urlJobs);
   
-
-
   return (
     <div className="home">
         {error && <div>{error}</div>}
